@@ -61,19 +61,32 @@ class App extends Component {
     render() {
         return (
             <div>
-                < Title />
-                < Form getWeather={this.getWeather} />
-                < Weather
-                    temperature={this.state.temperature}
-                    temp_min={this.state.temp_min}
-                    temp_max={this.state.temp_max}
-                    wind={this.state.wind}
-                    city={this.state.city}
-                    country={this.state.country}
-                    humidity={this.state.humidity}
-                    description={this.state.description}
-                    error={this.state.error}
-                />
+                <div className="wrapper">
+                    <div className="main">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-xs-5 title-container">
+                                    < Title />
+                                </div>
+                                <div className="col-xs-7 container-form">
+                                    < Form getWeather={this.getWeather} />
+                                    < Weather
+                                    temperature={this.state.temperature}
+                                    temp_min={this.state.temp_min}
+                                    temp_max={this.state.temp_max}
+                                    wind={this.state.wind}
+                                    city={this.state.city}
+                                    country={this.state.country}
+                                    humidity={this.state.humidity}
+                                    description={this.state.description}
+                                    error={this.state.error}
+                                    />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
