@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 // stateless component
 const Weather = props => (
-        <div className="weather__info">
+        <div className="weather__content">
             {
                 props.city && props.country &&  <p className="weather__key">Location:
                     <span className="weather__value"> { props.city }, { props.country }</span>
@@ -22,7 +22,7 @@ const Weather = props => (
             }
             {
                 props.temp_min && <p className="weather__key">Low Temp:
-                    <span className="weather__value">{ props.temp_min }</span>
+                    <span className="weather__value"> { props.temp_min }</span>
                 </p>
             }
             {
